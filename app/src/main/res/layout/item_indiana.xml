@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <ImageView android:id="@+id/image"
         android:layout_width="78dp"
         android:layout_height="78dp"
         android:scaleType="centerCrop"
@@ -23,22 +23,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView android:id="@+id/snatch"
+            <TextView android:id="@+id/award"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:text="10元话费"/>
 
-            <TextView
+            <TextView android:id="@+id/time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
-                android:layout_below="@+id/snatch"
+                android:layout_below="@+id/award"
                 android:layout_marginTop="4dp"
                 android:text="积分夺宝 11月15日 第12场"/>
 
-            <TextView android:id="@+id/snatch_state"
+            <TextView android:id="@+id/state"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -67,14 +67,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <TextView android:id="@+id/join_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="12sp"
                 android:text="已参与人次 8"/>
 
-            <TextView
+            <TextView android:id="@+id/condition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"

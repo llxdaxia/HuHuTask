@@ -1,4 +1,4 @@
-package alien95.cn.task;
+package alien95.cn.task.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,10 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import alien95.cn.task.R;
+import alien95.cn.task.adapter.AwardAdapter;
+
 /**
  * Created by linlongxin on 2016/3/9.
  */
-public class SnatchRecordFragment extends Fragment {
+public class IndianaRecordFragment extends Fragment {
 
     private RecyclerView recyclerView;
 
@@ -22,7 +25,7 @@ public class SnatchRecordFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_award_record,container,false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(container.getContext()));
-        recyclerView.setAdapter(new RecordAdapter());
+        recyclerView.setAdapter(new AwardAdapter());
         return view;
     }
 }
