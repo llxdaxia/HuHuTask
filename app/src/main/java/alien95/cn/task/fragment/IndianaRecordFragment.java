@@ -26,7 +26,7 @@ public class IndianaRecordFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_award_record,container,false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(container.getContext()));
-        recyclerView.setAdapter(new AwardAdapter(RecordModel.getAwardReords()));
+        recyclerView.setAdapter(new AwardAdapter(getActivity(),RecordModel.getAwardReords()));
         return view;
     }
 }

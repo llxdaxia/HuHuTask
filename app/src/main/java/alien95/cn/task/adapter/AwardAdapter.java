@@ -1,5 +1,6 @@
 package alien95.cn.task.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,11 +22,16 @@ import alien95.cn.task.model.bean.IndianaRecord;
 public class AwardAdapter extends RecyclerView.Adapter {
 
     private List<AwardRecord> data = new ArrayList<>();
+    private LayoutInflater inflater;
 
-    public AwardAdapter(List<AwardRecord> data) {
-        this.data = data;
+    public AwardAdapter(Context context){
+        inflater = LayoutInflater.from(context);
     }
 
+    public AwardAdapter(Context context,List<AwardRecord> data) {
+        this.data = data;
+        inflater = LayoutInflater.from(context);
+    }
 
     @Override
     public int getItemViewType(int position) {
@@ -37,7 +43,6 @@ public class AwardAdapter extends RecyclerView.Adapter {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View itemView;
         if(viewType == 0){
             itemView= inflater.inflate(R.layout.item_award,parent,false);
