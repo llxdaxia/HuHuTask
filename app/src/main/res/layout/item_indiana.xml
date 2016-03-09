@@ -46,7 +46,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
-                android:padding="2dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textSize="12sp"
                 android:textColor="@color/red"
                 android:background="@drawable/bg_item_snatch"
                 android:text="参与中"/>
@@ -57,9 +59,10 @@
             android:id="@+id/progress"
             android:layout_width="match_parent"
             android:layout_height="8dp"
-            android:layout_margin="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
             android:max="100"
-            android:progress="40"
+            android:progress="60"
             android:indeterminateOnly="false"
             android:mirrorForRtl="true"
             android:progressDrawable="@drawable/progress_horizontal"/>
@@ -92,6 +95,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/gray"/>
+        android:background="@color/grayDark"/>
 
 </LinearLayout>
