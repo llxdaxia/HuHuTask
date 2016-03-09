@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <ImageView
+    <ImageView android:id="@+id/image"
         android:layout_width="78dp"
         android:layout_height="78dp"
         android:scaleType="centerCrop"
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-            <TextView android:id="@+id/snatch"
+            <TextView android:id="@+id/award"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -28,7 +28,7 @@
                 android:layout_marginTop="16dp"
                 android:text="10元话费"/>
 
-            <TextView
+            <TextView android:id="@+id/time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
@@ -50,7 +50,7 @@
                 android:textStyle="bold"
                 android:text="获奖者："/>
 
-            <TextView
+            <TextView android:id="@+id/winner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
@@ -59,7 +59,7 @@
 
         </LinearLayout>
 
-        <TextView
+        <TextView android:id="@+id/lotteryTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"

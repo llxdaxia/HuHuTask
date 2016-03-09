@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import alien95.cn.task.R;
 import alien95.cn.task.adapter.AwardAdapter;
+import alien95.cn.task.model.RecordModel;
 
 /**
  * Created by linlongxin on 2016/3/9.
@@ -25,7 +26,7 @@ public class AwardRecordFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_award_record,container,false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(container.getContext()));
-        recyclerView.setAdapter(new AwardAdapter());
+        recyclerView.setAdapter(new AwardAdapter(RecordModel.getAwardReords()));
         return view;
     }
 }

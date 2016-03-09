@@ -13,6 +13,16 @@ public class IndianaRecord {
     private int progress;
     private int joinCount;
 
+    public IndianaRecord(int img, String reward, String state, String time, String condition, int progress, int joinCount) {
+        this.img = img;
+        this.reward = reward;
+        this.state = state;
+        this.time = time;
+        this.condition = condition;
+        this.progress = progress;
+        this.joinCount = joinCount;
+    }
+
     public int getImg() {
         return img;
     }

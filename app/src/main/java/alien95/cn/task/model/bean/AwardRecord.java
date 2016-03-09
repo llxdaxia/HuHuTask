@@ -11,6 +11,14 @@ public class AwardRecord {
     private String winner;
     private String lotteryTime;
 
+    public AwardRecord(int img, String reward, String time, String winner, String lotteryTime) {
+        this.img = img;
+        this.reward = reward;
+        this.time = time;
+        this.winner = winner;
+        this.lotteryTime = lotteryTime;
+    }
+
     public int getImg() {
         return img;
     }

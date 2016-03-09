@@ -8,13 +8,23 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import alien95.cn.task.R;
+import alien95.cn.task.model.bean.AwardRecord;
 import alien95.cn.task.model.bean.IndianaRecord;
 
 /**
  * Created by linlongxin on 2016/3/9.
  */
 public class AwardAdapter extends RecyclerView.Adapter {
+
+    private List<AwardRecord> data = new ArrayList<>();
+
+    public AwardAdapter(List<AwardRecord> data) {
+        this.data = data;
+    }
 
 
     @Override
@@ -41,16 +51,13 @@ public class AwardAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        if(position == 0){
-
-        }else {
-
-        }
+        if(position != 0)
+            ((AwardViewHolder)holder).setData(data.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return data.size();
     }
 
     class AwardViewHolder extends RecyclerView.ViewHolder{
@@ -63,7 +70,21 @@ public class AwardAdapter extends RecyclerView.Adapter {
 
         public AwardViewHolder(View itemView) {
             super(itemView);
+            image = (ImageView) itemView.findViewById(R.id.image);
+            award = (TextView) itemView.findViewById(R.id.award);
+            time = (TextView) itemView.findViewById(R.id.time);
+            winner = (TextView) itemView.findViewById(R.id.winner);
+            lotteryTime = (TextView) itemView.findViewById(R.id.lotteryTime);
         }
+
+        public void setData(AwardRecord data){
+            image.setBackgroundResource(data.getImg());
+            award.setText(data.getReward());
+            time.setText(data.getTime());
+            winner.setText(data.getWinner());
+            lotteryTime.setText(data.getLotteryTime());
+        }
+
     }
 
     class IndianaViewHolder extends RecyclerView.ViewHolder{
