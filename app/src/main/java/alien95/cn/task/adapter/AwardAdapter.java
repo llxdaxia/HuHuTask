@@ -24,31 +24,31 @@ public class AwardAdapter extends RecyclerView.Adapter {
     private List<AwardRecord> data = new ArrayList<>();
     private LayoutInflater inflater;
 
-    public AwardAdapter(Context context){
+    public AwardAdapter(Context context) {
         inflater = LayoutInflater.from(context);
     }
 
-    public AwardAdapter(Context context,List<AwardRecord> data) {
+    public AwardAdapter(Context context, List<AwardRecord> data) {
         this.data = data;
         inflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getItemViewType(int position) {
-        if(position == 0){
+        if (position == 0) {
             return 1;
-        }else
+        } else
             return 0;
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView;
-        if(viewType == 0){
-            itemView= inflater.inflate(R.layout.item_award,parent,false);
+        if (viewType == 0) {
+            itemView = inflater.inflate(R.layout.item_award, parent, false);
             return new AwardViewHolder(itemView);
-        }else{
-            itemView = inflater.inflate(R.layout.item_indiana,parent,false);
+        } else {
+            itemView = inflater.inflate(R.layout.item_indiana, parent, false);
             return new IndianaViewHolder(itemView);
         }
 
@@ -56,8 +56,8 @@ public class AwardAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        if(position != 0)
-            ((AwardViewHolder)holder).setData(data.get(position));
+        if (position != 0)
+            ((AwardViewHolder) holder).setData(data.get(position));
     }
 
     @Override
@@ -65,7 +65,7 @@ public class AwardAdapter extends RecyclerView.Adapter {
         return data.size();
     }
 
-    class AwardViewHolder extends RecyclerView.ViewHolder{
+    class AwardViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView image;
         private TextView award;
@@ -82,7 +82,7 @@ public class AwardAdapter extends RecyclerView.Adapter {
             lotteryTime = (TextView) itemView.findViewById(R.id.lotteryTime);
         }
 
-        public void setData(AwardRecord data){
+        public void setData(AwardRecord data) {
             image.setBackgroundResource(data.getImg());
             award.setText(data.getReward());
             time.setText(data.getTime());
@@ -92,7 +92,7 @@ public class AwardAdapter extends RecyclerView.Adapter {
 
     }
 
-    class IndianaViewHolder extends RecyclerView.ViewHolder{
+    class IndianaViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView image;
         private TextView award;
@@ -113,7 +113,7 @@ public class AwardAdapter extends RecyclerView.Adapter {
             progress = (ProgressBar) itemView.findViewById(R.id.progress);
         }
 
-        public void setData(IndianaRecord data){
+        public void setData(IndianaRecord data) {
             image.setBackgroundResource(data.getImg());
             award.setText(data.getReward());
             time.setText(data.getTime());

@@ -12,17 +12,17 @@ import alien95.cn.task.model.bean.IndianaRecord;
  */
 public class RecordModel {
 
-    public static List<AwardRecord> getAwardReords(){
+    public static List<AwardRecord> getAwardReords() {
         List<AwardRecord> data = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            data.add(new AwardRecord(R.drawable.ic_demo,"10元话费","积分夺宝11月15日 第十二场","王思聪","2015年11月15日06:00 已开奖"));
+            data.add(new AwardRecord(R.drawable.ic_demo, "10元话费", "积分夺宝11月15日 第十二场", "王思聪", "2015年11月15日06:00 已开奖"));
         }
         return data;
     }
 
-    public static IndianaRecord[] getIndianaRecordS(){
+    public static IndianaRecord[] getIndianaRecordS() {
         return new IndianaRecord[]{
-                new IndianaRecord(R.drawable.ic_demo,"10元话费","积分夺宝11月15日 第十二场","参与中","满20人次即开奖",70,20)
+                new IndianaRecord(R.drawable.ic_demo, "10元话费", "积分夺宝11月15日 第十二场", "参与中", "满20人次即开奖", 70, 20)
         };
     }
 }
